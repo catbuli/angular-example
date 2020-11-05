@@ -3,7 +3,7 @@
  * @Author Maobuli
  * @Date 2020-11-05 17:51:41
  * @LastEditors Maobuli
- * @LastEditTime 2020-11-05 19:25:27
+ * @LastEditTime 2020-11-05 19:33:42
 -->
 <h2>My heroes</h2>
 <ul class="heroes">
@@ -12,12 +12,4 @@
     </li>
 </ul>
 
-<div *ngIf="selectedHero">
-    <h2>{{selectedHero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedHero.id}}</div>
-    <div>
-        <label>name:
-            <input [(ngModel)]="selectedHero.name" placeholder="name" />
-        </label>
-    </div>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

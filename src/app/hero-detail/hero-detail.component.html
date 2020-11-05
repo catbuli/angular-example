@@ -1,0 +1,16 @@
+<!--
+ * @Description 
+ * @Author Maobuli
+ * @Date 2020-11-05 19:29:24
+ * @LastEditors Maobuli
+ * @LastEditTime 2020-11-05 19:30:34
+-->
+<div *ngIf="hero">
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+        <label>name:
+            <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+    </div>
+</div>
