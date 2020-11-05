@@ -1,3 +1,10 @@
+/*
+ * @Description 
+ * @Author Maobuli
+ * @Date 2020-11-03 17:41:26
+ * @LastEditors Maobuli
+ * @LastEditTime 2020-11-05 14:04:36
+ */
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
@@ -27,6 +34,6 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
   });
 };
