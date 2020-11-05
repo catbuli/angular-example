@@ -1,3 +1,10 @@
+/*
+ * @Description 
+ * @Author Maobuli
+ * @Date 2020-11-03 17:41:26
+ * @LastEditors Maobuli
+ * @LastEditTime 2020-11-05 17:44:35
+ */
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-example';
+  title = 'angular-example-hero';
 }
