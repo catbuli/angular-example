@@ -3,13 +3,11 @@
  * @Author Maobuli
  * @Date 2020-11-05 17:51:41
  * @LastEditors Maobuli
- * @LastEditTime 2020-11-05 19:33:42
+ * @LastEditTime 2020-11-06 13:24:20
 -->
 <h2>My heroes</h2>
 <ul class="heroes">
-    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" [routerLink]="['/detail',hero.id]">
         <span class="badge">{{hero.id}}</span>{{hero.name}}
     </li>
 </ul>
-
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>

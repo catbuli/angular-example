@@ -3,7 +3,7 @@
  * @Author Maobuli
  * @Date 2020-11-05 19:36:33
  * @LastEditors Maobuli
- * @LastEditTime 2020-11-06 12:18:53
+ * @LastEditTime 2020-11-06 13:27:56
  */
 import { Injectable } from '@angular/core';
 import { Hero } from './hero';
@@ -16,10 +16,15 @@ import { MessageService } from './message.service'
 })
 export class HeroService {
 
-    constructor(private messsageService: MessageService) { }
+    constructor(private messageService: MessageService) { }
 
     getHeroes(): Observable<Hero[]> {
-        this.messsageService.add("HeroService: fetched heroes");
+        this.messageService.add("HeroService: fetched heroes");
         return of(HEROES);
+    }
+    getHero(id: number): Observable<Hero> {
+        // TODO: send the message _after_ fetching the hero
+        this.messageService.add(`HeroService: fetched hero id=${id}`);
+        return of(HEROES.find(hero => hero.id === id));
     }
 }
