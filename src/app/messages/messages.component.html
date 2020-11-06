@@ -1,0 +1,14 @@
+<!--
+ * @Description 
+ * @Author Maobuli
+ * @Date 2020-11-06 12:03:26
+ * @LastEditors Maobuli
+ * @LastEditTime 2020-11-06 12:20:37
+-->
+<div *ngIf="messageService.messages.length">
+
+    <h2>Messages</h2>
+    <button class="clear" (click)="messageService.clear()">clear</button>
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+
+</div>
