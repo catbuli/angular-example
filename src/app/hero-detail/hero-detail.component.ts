@@ -3,7 +3,7 @@
  * @Author Maobuli
  * @Date 2020-11-05 19:29:24
  * @LastEditors Maobuli
- * @LastEditTime 2020-11-06 13:30:33
+ * @LastEditTime 2020-11-06 13:53:29
  */
 import { Location } from '@angular/common';
 import { Component, OnInit, Input, Output } from '@angular/core';
@@ -34,5 +34,14 @@ export class HeroDetailComponent implements OnInit {
         let id = +this.route.snapshot.paramMap.get('id');
         this.heroService.getHero(id)
             .subscribe(hero => this.hero = hero);
+    }
+
+    goBack(): void {
+        this.location.back();
+    }
+
+    save(): void {
+        this.heroService.updateHero(this.hero)
+            .subscribe(() => this.goBack());
     }
 }
